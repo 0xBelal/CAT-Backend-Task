@@ -4,7 +4,7 @@
 
 ## UML Class Diagram
 
-![alt text](<Screenshot from 2025-12-14 10-38-33.png>)
+![alt text](<img/Screenshot from 2025-12-14 10-38-33.png>)
 
 ## Features
 
@@ -50,4 +50,4 @@
 
 ### Demo
 
-![alt text](<Screenshot from 2025-12-14 10-25-34.png>)
+![alt text](<img/Screenshot from 2025-12-14 10-25-34.png>)
