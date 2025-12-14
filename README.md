@@ -8,8 +8,12 @@
 
 ## Features
 
-- add tasks with a title and description
-- list all tasks
+- **Add Tasks**
+  - Users can add tasks with a **title**.
+  - Add a **description** for more details.
+- **List All Tasks**
+  - Display all tasks with their **status** (not-started/in-progress/done).
+  - Show **task number** for easy reference.
 
 ## structure
 
