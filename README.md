@@ -48,6 +48,12 @@
     ./main list
 ```
 
+> Update Task Status
+
+```
+    ./main status "<task_id>" "<new_status>" 
+```
+
 ### Demo
 
 ![alt text](<img/Screenshot from 2025-12-14 10-25-34.png>)
