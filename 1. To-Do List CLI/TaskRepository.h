@@ -12,6 +12,7 @@ class TaskRepository
     public:
     virtual bool add (Task task) = 0;
     virtual vector<Task> getAll() = 0;
+    virtual  Task getTaskById(string id) =0;
     virtual ~TaskRepository() = default;
 
 };

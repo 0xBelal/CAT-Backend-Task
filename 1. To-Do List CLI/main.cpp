@@ -15,7 +15,8 @@ void printTasks(vector<Task> vt)
     cout<<"==== total tasks = "<<vt.size()<<" ====" <<endl;
     for (Task t: vt)
     {
-        cout<<"task #"<<t.get_id()<< "  Title : " << t.get_title()<<endl;
+        cout<<"task #"<<t.get_id()<< "   Status : "<<t.get_status()<<endl;
+        cout<<"Title : " << t.get_title()<<endl;
         cout<<"description:\n";
         cout<<"\t" << t.get_description()<<endl;
 
@@ -51,6 +52,16 @@ int main(int argc, char* argv[]) {
     else if (cmd == "list") {
         vector<Task> tasks = service.listTasks();
         printTasks(tasks);
+    }else if (cmd == "status") // status id <done,in-progress,not-start>
+    {
+
+        if (service.updateStatus(argv[2], argv[3]))
+        {
+            cout<< "Task status update successfully...\n";
+        }else
+        {
+            cout<< "Error while updating task status....\n";
+        }
     }
     else {
         cout << "Unknown command: " << cmd << "\n";

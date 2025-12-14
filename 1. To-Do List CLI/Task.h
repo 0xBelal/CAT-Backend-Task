@@ -15,6 +15,7 @@ private:
     string id;
     string title;
     string description;
+    string status;
 
 public:
 
@@ -24,10 +25,12 @@ public:
     string get_id(){return id;}
     string get_title(){return title;}
     string get_description(){return description;}
+    string get_status(){return status;}
 
     void set_id(string id){  this->id = id;}
     void set_title(string title){ this->title = title;}
     void set_description(string desc){this->description = desc;}
+    void set_status(string status){this->status = status;}
 
 };
 

@@ -54,6 +54,7 @@ private:
         if (file.is_open())
         {
             file<<task.get_id()<<endl;
+            file<<task.get_status()<<endl;
             file<<task.get_title()<<endl;
             file<<task.get_description()<<endl;
 
@@ -92,8 +93,9 @@ private:
             }
 
             task.set_id(lines[0]);
-            task.set_title(lines[1]);
-            task.set_description(lines[2]);
+            task.set_status(lines[1]);
+            task.set_title(lines[2]);
+            task.set_description(lines[3]);
         }
 
         file.close();
@@ -133,6 +135,31 @@ private:
 
         return tasks;
     }
+
+    Task getTaskById(string id)
+    {
+        Task task;
+        string fileName = TaskFilePath(id);
+        fstream file;
+        file.open((fileName),ios::in);
+        vector<string >lines;
+        if (file.is_open())
+        {
+            string line;
+            while (getline(file,line))
+            {
+                lines.push_back(line);
+            }
+
+            task.set_id(lines[0]);
+            task.set_status(lines[1]);
+            task.set_title(lines[2]);
+            task.set_description(lines[3]);
+
+        }
+        return task;
+    }
+
     ~FileTaskRepo()
     {
 

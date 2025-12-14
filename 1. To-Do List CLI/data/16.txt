@@ -1,0 +1,4 @@
+16
+done
+Study for exam
+exam => computer architecture (oral and practical)

@@ -27,7 +27,7 @@ public:
         new_task.set_title(title);
         new_task.set_description(desc);
         new_task.set_id(generateTaskID());
-
+        new_task.set_status("not-started");
 
         return taskRepository->add(new_task);
     }
@@ -37,6 +37,27 @@ public:
         return taskRepository->getAll();
     }
 
+    bool updateStatus(string id,string status)
+    {
+        Task task = taskRepository->getTaskById(id);
+        string fileName = TaskFilePath(task.get_id());
+        fstream file;
+        file.open(fileName, ios::out);
+
+        if (file.is_open())
+        {
+            file<<task.get_id()<<endl;
+            file<<status<<endl;
+            file<<task.get_title()<<endl;
+            file<<task.get_description()<<endl;
+
+            task.set_status(status);
+            file.close();
+            return true;
+        }
+
+        return false;
+    }
     ~TaskService() {}
 
 };
