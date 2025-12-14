@@ -1,4 +1,0 @@
-14
-not-started
-study for college
-study operating systems => - process sync => Semaphore, Mutex, Moniter and Lock
