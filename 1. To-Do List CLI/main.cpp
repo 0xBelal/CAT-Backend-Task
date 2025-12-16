@@ -28,7 +28,7 @@ void printTasks(vector<Task> vt)
 int main(int argc, char* argv[]) {
 
     if (argc < 2) {
-        std::cout << "Usage: task <command> [args]\n";
+        std::cout << "Usage: ./main <command> [args]\n";
         return 1;
     }
 
@@ -39,7 +39,7 @@ int main(int argc, char* argv[]) {
 
     if (cmd == "add") {
         if (argc < 4) {
-            cout << "Usage: task add <title> <description>\n";
+            cout << "Usage: ./main add <title> <description>\n";
             return 0;
         }
 
